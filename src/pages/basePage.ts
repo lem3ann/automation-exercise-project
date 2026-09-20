@@ -16,4 +16,16 @@ export class BasePage {
   getByPlaceholder(name: string): Locator {
     return this.page.getByPlaceholder(name);
   }
+  // GETBYLINK
+  getByLink(name: string): Locator {
+    return this.page.getByRole("link", { name });
+  }
+  // GETBYTEXT
+  getByText(name: string): Locator {
+    return this.page.getByText(name)
+  }
+  // GETBYHEADER
+  getByHeader(name: string): Locator {
+    return this.page.getByRole("heading", { name: name })
+  }
 }
