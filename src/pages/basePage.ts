@@ -22,10 +22,14 @@ export class BasePage {
   }
   // GETBYTEXT
   getByText(name: string): Locator {
-    return this.page.getByText(name)
+    return this.page.getByText(name);
   }
   // GETBYHEADER
   getByHeader(name: string): Locator {
-    return this.page.getByRole("heading", { name: name })
+    return this.page.getByRole("heading", { name: name });
+  }
+  // TAKEWITHLOCATOR
+  takeWithLocator(locator: string): Locator {
+    return this.page.locator(locator);
   }
 }
